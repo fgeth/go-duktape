@@ -20,19 +20,19 @@ extern void goDebugWriteFlushFunction(void *uData);
 extern duk_idx_t goDebugRequestFunction(duk_context *ctx, void *uData, duk_idx_t nvalues);
 extern void goDebugDetachedFunction(duk_context *ctx, void *uData);
 
-static void _duk_debugger_attach(duk_context *ctx, bool peek, bool readFlush, bool writeFlush, bool request, void *uData) {
-	duk_debugger_attach(
-		ctx,
-		goDebugReadFunction,
-		((duk_size_t (*)(void*, const char*, duk_size_t)) goDebugWriteFunction),
-		peek ? goDebugPeekFunction : NULL,
-		readFlush ? goDebugReadFlushFunction : NULL,
-		writeFlush ? goDebugWriteFlushFunction : NULL,
-		request ? goDebugRequestFunction : NULL,
-		goDebugDetachedFunction,
-		uData
-	);
-}
+//static void _duk_debugger_attach(duk_context *ctx, bool peek, bool readFlush, bool writeFlush, bool request, void *uData) {
+//	duk_debugger_attach(
+//		ctx,
+//		goDebugReadFunction,
+//		((duk_size_t (*)(void*, const char*, duk_size_t)) goDebugWriteFunction),
+//		peek ? goDebugPeekFunction : NULL,
+//		readFlush ? goDebugReadFlushFunction : NULL,
+//		writeFlush ? goDebugWriteFlushFunction : NULL,
+//		request ? goDebugRequestFunction : NULL,
+//		goDebugDetachedFunction,
+//		uData
+//	);
+//}
 */
 import "C"
 import (
