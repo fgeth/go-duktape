@@ -123,7 +123,7 @@ static int duk__parse_pointer(const char *str, void **out) {
 	 * JX pointer parsing also relies on that.
 	 */
 
-	*out = (void *) val;
+	*out = (void *) &val;
 	return 1;
 }
 
